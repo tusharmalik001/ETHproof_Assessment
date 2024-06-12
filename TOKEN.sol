@@ -27,17 +27,17 @@ contract MyToken {
     mapping (address => uint) public balances;
     // mint function
 
-    function mint(address _address, uint _value) public {
-        totalsupply += _value;
-        balances[_address] += _value;
+    function mint(address Address, uint Value) public {
+        totalsupply += Value;
+        balances[Address] += Value;
     }
 
 
     // burn function
-    function burn(address _address, uint _value) public {
-        if(balances[_address] >= _value){
-        totalsupply -= _value;
-        balances[_address] -= _value;
+    function burn(address Address, uint Value) public {
+        if(balances[Address] >= Value){
+        totalsupply -= Value;
+        balances[Address] -= Value;
     }
 }
 }
